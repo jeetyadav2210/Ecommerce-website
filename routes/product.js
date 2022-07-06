@@ -1,4 +1,4 @@
-let { productInsert, simpleApi } = require("../controller/product")
+let { addProductData, getproduct, updateproductData, deletedata } = require("../controller/product")
 
 
 
@@ -8,8 +8,12 @@ var router = express.Router();
 
 
 
-router.post("/product", productInsert);
-router.get("/test1", simpleApi)
+
+
+router.delete("/deleteproductData/:product_id", deletedata)
+router.put("/updateproductData/:product_id", updateproductData)
+router.post("/productdataAdd", addProductData);
+router.get("/getdataProduct/:product_id", getproduct)
 
 
 
